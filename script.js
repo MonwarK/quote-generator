@@ -56,6 +56,9 @@ async function getQuote() {
     } 
     catch (err){
         console.log("Whoops, no quote...", err)
+        quoteDOM.innerHTML = "'Whoops, no quote...''"
+        autherDOM.innerHTML = "Unknown"
+        loaded()
     }
 }
 
