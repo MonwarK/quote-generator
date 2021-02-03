@@ -47,9 +47,9 @@ async function getQuote() {
 
         // If author is null
         if(data.quoteAuthor == ""){
-            autherDOM.innerHTML = "- Unknown"
+            autherDOM.innerHTML = "Unknown"
         } else{
-            autherDOM.innerHTML = "- "+data.quoteAuthor
+            autherDOM.innerHTML = data.quoteAuthor
         }
 
         loaded()
@@ -63,7 +63,7 @@ async function getQuote() {
 function tweetQuote() {
     const quote = quoteDOM.innerHTML;
     const author = autherDOM.innerHTML;
-    const twitter = `https://twitter.com/intent/tweet?text=${quote} ${author}`
+    const twitter = `https://twitter.com/intent/tweet?text=${quote} -${author}`
 
     window.open(twitter, "_blank");
 }
